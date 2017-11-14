@@ -1,24 +1,23 @@
 .landing-section-1 {
+  margin-top: 48px;
   padding: 10px 10px 30px 10px;
-  background-color: #00B5AD;
+  background-color: #55995d;
   color: #E5F9E7;
+}
+
+.landing-section-1 .ui.borderless.menu {
+  background-color: #084f10;
 }
 
 .landing-section-2 {
   padding: 20px 10px 20px 10px;
-  background-color: #E5F9E7;
+  background-color: #e1d3c1;
   color:  #00B5AD;
 }
 
 .landing-section-3 {
   padding: 20px 10px 30px 30px;
-  background-color: #00B5AD;
-  color: #E5F9E7;
-}
-
-.landing-section-5 {
-  padding: 20px 10px 20px 10px;
-  background-color: #00B5AD;
+  background-color: #55995d;
   color: #E5F9E7;
 }
 
