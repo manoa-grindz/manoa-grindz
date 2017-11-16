@@ -13,6 +13,16 @@ FlowRouter.route('/', {
   },
 });
 
+
+/*                        BROWSE ROUTE                          */ 
+export const browsePageRouteName  = 'Browse_Page';
+FlowRouter.route('/browse', {
+  name: browsePageRouteName,
+  action() {
+    BlazeLayout.render('Browse_Layout', { main: browsePageRouteName });
+  },
+});
+
 /*                        DIRECTORY ROUTE                       */
 
 function addDirectoryBodyClass() {
