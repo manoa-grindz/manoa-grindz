@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/manoa-grindz.iml" filepath="$PROJECT_DIR$/manoa-grindz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/manoa-grindz.iml" filepath="$PROJECT_DIR$/.idea/manoa-grindz.iml" />
     </modules>
   </component>
 </project>

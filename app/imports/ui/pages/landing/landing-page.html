@@ -4,16 +4,22 @@
     <div class="ui grid">
 
       <div class="row">
-        <div class="ui fixed borderless menu">
-          <div class="ui item centered">
-            {{> Cas_Login }}
+        <div class="navbar">
+          <div class="ui fixed borderless menu inverted">
+            <div class="ui container">
+              <a href="/" class="item">Manoa Grindz</a>
+              <a href="/browse" class="item">Browse</a>
+              <a href="/" class="item">Today's Picks</a>
+              <a onclick="userRedirect()" href="" class="item right"><i class="user icon"></i></a>
+              <div class="item">{{>Cas_Login}}</div>
+            </div>
           </div>
         </div>
 
       </div>
       <div class="row">
         <div class="ui center aligned sixteen wide column">
-          <h1 class="landing-section-1-welcome">Welcome to Manoa Grindz </h1>
+          <h1 class="landing-section-1-welcome">Welcome to Manoa Grindz</h1>
           <h3 class="landing-section-1-tagline">A University of Hawaii at Manoa campus focused app to help students know about different food options available on campus.</h3>
         </div>
       </div>
