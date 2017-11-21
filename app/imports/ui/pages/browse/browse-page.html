@@ -3,7 +3,9 @@
 		<div class="ui fixed borderless menu inverted">
 			<div class="ui container">
 				<a href="/" class="item">Manoa Grindz</a>
-				<a href="/" class="item right"><i class="user icon"></i></a>
+				<a href="/browse" class="item active">Browse</a>
+				<a href="/" class="item">Today's Picks</a>
+				<a onclick="userRedirect()" href="" class="item right"><i class="user icon"></i></a>
 				<div class="item">{{>Cas_Login}}</div>
 			</div>
 		</div>
@@ -68,4 +70,10 @@
 		.dropdown()
 		;
 	</script>
+  <script>
+    function userRedirect() {
+      const username = Meteor.user().profile.name;
+      FlowRouter.go(`/${username}/profile`);
+    }
+  </script>
 </template>
