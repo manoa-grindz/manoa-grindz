@@ -5,7 +5,10 @@
 
 .search-bar {
 	height: 40vh;
-	background: url("http://via.placeholder.com/1200x900");
+	background: url("images/featureimg-browse.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .ui.multiple.dropdown > .label {
