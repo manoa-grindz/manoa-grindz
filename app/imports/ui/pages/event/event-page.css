@@ -12,3 +12,7 @@
 	background-color: green;
 	color: white;
 }
+
+.ui.fluid.image {
+  height: 400px;
+}
