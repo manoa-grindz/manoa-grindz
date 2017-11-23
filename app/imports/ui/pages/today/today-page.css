@@ -3,12 +3,10 @@
 	border-radius: 0px;
 }
 
-.search-bar {
-	height: 40vh;
-	background: url("http://via.placeholder.com/1200x900");
+.placeholder-today {
+	height: 20vh;
 }
 
-.ui.multiple.dropdown > .label {
-	background-color: green;
-	color: white;
+.ui.segment.todays {
+  height: 400px;
 }
