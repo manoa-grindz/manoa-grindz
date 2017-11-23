@@ -23,6 +23,24 @@ FlowRouter.route('/browse', {
   },
 });
 
+/*                        TODAYS ROUTE                          */
+export const todayPageRouteName  = 'Today_Page';
+FlowRouter.route('/today', {
+  name: browsePageRouteName,
+  action() {
+    BlazeLayout.render('Today_Layout', { main: todayPageRouteName });
+  },
+});
+
+/*                        EVENTS ROUTE                          */
+export const eventPageRouteName  = 'Event_Page';
+FlowRouter.route('/events', {
+  name: browsePageRouteName,
+  action() {
+    BlazeLayout.render('Event_Layout', { main: eventPageRouteName });
+  },
+});
+
 /*                        DIRECTORY ROUTE                       */
 
 function addDirectoryBodyClass() {
