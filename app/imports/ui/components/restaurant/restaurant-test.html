@@ -1,0 +1,27 @@
+<template name="Restaurant_Test">
+
+  <div class="ui container">
+    <div class="ui segment">
+      {{ restaurant.name }}
+    </div>
+    <div class="ui segment">
+      {{ restaurant.location }}
+    </div>
+    <div class="ui segment">
+      {{ restaurant.description }}
+    </div>
+    <div class="ui segment">
+      {{ restaurant.tags }}
+    </div>
+    <div class="ui segment">
+      {{#each menuitem in restaurant.menuitems }}
+        {{menuitem.name}}
+        {{menuitem.price}}
+      {{/each}}
+    </div>
+    <div class="ui segment">
+      {{ restaurant.picture }}
+    </div>
+  </div>
+
+</template>
