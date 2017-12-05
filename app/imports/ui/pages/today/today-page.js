@@ -13,4 +13,5 @@ Template.Today_Page.helpers({
 
 Template.Today_Page.onCreated(function onCreated() {
   this.subscribe(Restaurants.getPublicationName());
+  this.context = Restaurants.getSchema().namedContext('Today_Page');
 });
