@@ -3,6 +3,32 @@
 
 
   <div class="ui container">
+    {{#if Template.subscriptionsReady}}
+    <table style="margin-top: 20px" class="ui celled table">
+      <thead>
+      <tr>
+        <th>Event</th>
+        <th>Duration</th>
+        <th>Location</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      {{#each event in eventsList}}
+      <tr>
+        <td>{{contact.first}}</td>
+        <td>{{contact.last}}</td>
+        <td>{{contact.address}}</td>
+        <td>{{contact.telephone}}</td>
+        <td>{{contact.email}}</td>
+        <td><a href= "{{pathFor 'Edit_Contact_Page' _id=contact._id}}">Edit</a></td>
+      </tr>
+      {{/each}}
+      </tbody>
+    </table>
+
+ <!--- <div class="ui container">
     <img class="ui fluid image" src="http://via.placeholder.com/200x200" draggable="true" data-bukket-ext-bukket-draggable="true">
     <div class="ui vertical segment">
       <p>Some information regarding current events</p>
@@ -14,6 +40,7 @@
       <p>testing more infomration here</p>
     </div>
   </div>
+  -->
 
 	
 	
