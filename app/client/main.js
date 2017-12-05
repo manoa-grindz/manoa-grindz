@@ -4,6 +4,7 @@ import '/imports/ui/components/directory';
 import '/imports/ui/components/user';
 import '/imports/ui/components/landing';
 import '/imports/ui/components/restaurant';
+import '/imports/ui/components/today';
 import '/imports/ui/layouts/browse';
 import '/imports/ui/layouts/directory';
 import '/imports/ui/layouts/event';

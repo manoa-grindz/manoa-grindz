@@ -1,0 +1,23 @@
+<template name="Today_Page_Card">
+  <div class="ui segment">
+    <h3><a href="">{{ restaurant.name }}</a></h3>
+    <a href=""><img class="ui fluid image" src={{ restaurant.picture }} style="height: 200px"></a>
+    <span>{{ restaurant.location }}</span>
+    <div class="content">
+      <div class="ui grid">
+        <div class="eleven wide left aligned column">
+          {{#each item in restaurant.items }}
+            <div class="row"><a href="">{{item.name}}</a></div>
+          {{/each}}
+        </div>
+        <div class="five wide right aligned column">
+          {{#each item in restaurant.items }}
+            <div class="row">{{item.price}}</div>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+    <div class="ui divider"></div>
+    <button class="ui teal fluid button">View Restaurant Page</button>
+  </div>
+</template>

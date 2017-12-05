@@ -22,10 +22,10 @@ class RestaurantCollection extends BaseCollection {
       location: { type: String },
       tags: { type: Array },
       'tags.$': { type: String },
-      menuitems: { type: Array },
-      'menuitems.$': Object,
-      'menuitems.$.name': String,
-      'menuitems.$.price': Number,
+      items: { type: Array },
+      'items.$': Object,
+      'items.$.name': String,
+      'items.$.price': Number,
       description: { type: String, optional: true },
       picture: { type: SimpleSchema.RegEx.Url, optional: true },
     }, { tracker: Tracker }));
@@ -42,7 +42,7 @@ class RestaurantCollection extends BaseCollection {
    * @throws {Meteor.Error} If the restaurant definition includes a defined name.
    * @returns The newly created docID.
    */
-  define({ name, location, tags, menuitems, description, picture }) {
+  define({ name, location, tags, items, description, picture }) {
     check(name, String);
     check(location, String);
     check(description, String);
@@ -50,7 +50,7 @@ class RestaurantCollection extends BaseCollection {
     if (this.find({ name }).count() > 0) {
       throw new Meteor.Error(`${name} is previously defined in another Restaurant`);
     }
-    return this._collection.insert({ name, location, tags, menuitems, description, picture });
+    return this._collection.insert({ name, location, tags, items, description, picture });
   }
 
   /**
@@ -122,9 +122,9 @@ class RestaurantCollection extends BaseCollection {
     const description = doc.description;
     const location = doc.location;
     const tags = doc.tags;
-    const menuitems = doc.menuitems;
+    const items = doc.items;
     const picture = doc.picture;
-    return { name, location, tags, menuitems, description, picture };
+    return { name, location, tags, items, description, picture };
   }
 }
 

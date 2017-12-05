@@ -1,5 +1,8 @@
 import { FlowRouter } from 'meteor/kadira:flow-router';
+import { Template } from 'meteor/templating';
 import { BlazeLayout } from 'meteor/kadira:blaze-layout';
+import { Restaurants } from '/imports/api/restaurant/RestaurantCollection';
+import { _ } from 'meteor/underscore';
 import { $ } from 'meteor/jquery';
 
 

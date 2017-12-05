@@ -92,7 +92,7 @@
             "Vietnamese",
             "Vegetarian"
           ],
-          "menuitems": [
+          "items": [
             {
               "name": "Pho",
               "price": "7.99"

@@ -14,9 +14,9 @@
       {{ restaurant.tags }}
     </div>
     <div class="ui segment">
-      {{#each menuitem in restaurant.menuitems }}
-        {{menuitem.name}}
-        {{menuitem.price}}
+      {{#each item in restaurant.items }}
+        {{item.name}}
+        {{item.price}}
       {{/each}}
     </div>
     <div class="ui segment">

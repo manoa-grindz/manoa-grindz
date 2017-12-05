@@ -11,7 +11,7 @@ if (Meteor.isServer) {
     const name = 'Testaurant';
     const location = 'Test Avenue';
     const tags = ['Tag1', 'Tag2'];
-    const menuitems = [
+    const items = [
       {
         name: 'TestItem',
         price: 7.99,
@@ -23,7 +23,7 @@ if (Meteor.isServer) {
     ];
     const description = 'Testauranting';
     const picture = '/images/bale.jpg';
-    const defineObject = { name, location, tags, menuitems, description, picture  };
+    const defineObject = { name, location, tags, items, description, picture  };
 
     before(function setup() {
       removeAllEntities();
