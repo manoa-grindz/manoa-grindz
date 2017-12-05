@@ -1,13 +1,3 @@
-.navbar .ui.inverted.menu {
-	background-color: #084f10;
-	border-radius: 0px;
-}
-
-.search-bar {
-	height: 40vh;
-	background: url("http://via.placeholder.com/1200x900");
-}
-
 .ui.multiple.dropdown > .label {
 	background-color: green;
 	color: white;

@@ -18,7 +18,7 @@ FlowRouter.route('/', {
 
 
 /*                        BROWSE ROUTE                          */ 
-export const browsePageRouteName  = 'Browse_Page';
+export const browsePageRouteName = 'Browse_Page';
 FlowRouter.route('/browse', {
   name: browsePageRouteName,
   action() {
@@ -27,22 +27,32 @@ FlowRouter.route('/browse', {
 });
 
 /*                        TODAYS ROUTE                          */
-export const todayPageRouteName  = 'Today_Page';
+export const todayPageRouteName = 'Today_Page';
 FlowRouter.route('/today', {
-  name: browsePageRouteName,
+  name: todayPageRouteName,
   action() {
     BlazeLayout.render('Today_Layout', { main: todayPageRouteName });
   },
 });
 
 /*                        EVENTS ROUTE                          */
-export const eventPageRouteName  = 'Event_Page';
+export const eventPageRouteName = 'Event_Page';
 FlowRouter.route('/events', {
-  name: browsePageRouteName,
+  name: eventPageRouteName,
   action() {
     BlazeLayout.render('Event_Layout', { main: eventPageRouteName });
   },
 });
+
+/*                        ADD RESTAURANT ROUTE                  */
+export const addRestaurantPageRouteName = 'Add_Restaurant_Page';
+FlowRouter.route('/add-restaurant', {
+  name: addRestaurantPageRouteName,
+  action() {
+    BlazeLayout.render('Add_Restaurant_Layout', { main: addRestaurantPageRouteName });
+  },
+});
+
 
 /*                        DIRECTORY ROUTE                       */
 
@@ -98,6 +108,7 @@ userRoutes.route('/filter', {
     BlazeLayout.render('User_Layout', { main: filterPageRouteName });
   },
 });
+
 
 /*                        MISC ROUTES                       */
 FlowRouter.notFound = {
