@@ -83,6 +83,53 @@
       ]
     },
     {
+      "name": "RestaurantCollection",
+      "contents": [
+        {
+          "name": "Ba-Le",
+          "location": "UH Somewhere near the library",
+          "tags": [
+            "Vietnamese",
+            "Vegetarian"
+          ],
+          "items": [
+            {
+              "name": "Pho",
+              "price": "7.99"
+            },
+            {
+              "name": "Banh Mi",
+              "price": "4.99"
+            }
+          ],
+          "description": "ur favorite place for a sandwich",
+          "picture": "/images/bale.jpg"
+        },
+        {
+          "name": "Campus Center Food Court",
+          "location": "Campus Center 2nd Floor",
+          "tags": [
+            "Local",
+            "Vegetarian",
+            "Seafood"
+          ],
+          "items": [
+            {
+              "name": "Steak Plate",
+              "price": "8.99"
+            },
+            {
+              "name": "California Roll",
+              "price": "3.99"
+            }
+          ],
+          "description": "Local favorites served daily at Campus Center Food Court!",
+          "picture": "/images/foodcourt-cc.jpg"
+        }
+      ]
+    },
+
+    {
       "name": "ProfileCollection",
       "contents": [
         {

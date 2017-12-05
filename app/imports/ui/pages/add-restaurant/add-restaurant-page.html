@@ -1,0 +1,10 @@
+<template name="Add_Restaurant_Page">
+  {{> Site_Header}}
+
+  <script>
+    function userRedirect() {
+      const username = Meteor.user().profile.name;
+      FlowRouter.go(`/${username}/profile`);
+    }
+  </script>
+</template>

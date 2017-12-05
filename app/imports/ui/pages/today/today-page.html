@@ -1,16 +1,6 @@
 <template name="Today_Page">
-  <div class="navbar">
-    <div class="ui fixed borderless menu inverted">
-      <div class="ui container">
-        <a href="/" class="item">Manoa Grindz</a>
-        <a href="/browse" class="item">Browse</a>
-        <a href="/today" class="item active">Today's Picks</a>
-        <a href="/events" class="item">Events</a>
-        <a onclick="userRedirect()" href="" class="item right"><i class="user icon"></i></a>
-        <div class="item">{{>Cas_Login}}</div>
-      </div>
-    </div>
-  </div>
+
+  {{> Site_Header}}
 
   <div class="placeholder-today">
 
@@ -18,97 +8,13 @@
 
   <div class="ui container">
     <div class="ui grid">
-      <div class="four wide column">
-        <div class="ui segment">
-          <h3>Title</h3>
-          <img class="ui fluid image" src="http://via.placeholder.com/1200x900" style="height: 200px">
-          <span>Location</span>
-          <div class="content">
-            <div class="ui grid">
-              <div class="eleven wide left aligned column">
-                <div class="row"><a href="">Item1</a></div>
-                <div class="row"><a href="">Item2</a></div>
-                <div class="row"><a href="">Item3</a></div>
-              </div>
-              <div class="five wide right aligned column">
-                <div class="row">$7.50</div>
-                <div class="row">$6.50</div>
-                <div class="row">$11.50</div>
-              </div>
-            </div>
-          </div>
-          <button class="ui teal fluid button">View Restaurant Page</button>
-        </div>
-      </div>
-      <div class="four wide column">
-        <div class="ui segment">
-          <h3>Serg's Mexican</h3>
-          <img class="ui image" src="/images/sergs.png" style="height: 200px">
-          <span>Location</span>
-          <div class="content">
-            <div class="ui grid">
-              <div class="eleven wide left aligned column">
-                <div class="row"><a href="">Item1</a></div>
-                <div class="row"><a href="">Item2</a></div>
-                <div class="row"><a href="">Item3</a></div>
-              </div>
-              <div class="five wide right aligned column">
-                <div class="row">$7.50</div>
-                <div class="row">$6.50</div>
-                <div class="row">$11.50</div>
-              </div>
-            </div>
-          </div>
-          <button class="ui teal fluid button">View Restaurant Page</button>
-        </div>
-      </div>
-      <div class="four wide column">
-        <div class="ui segment">
-          <h3>Ba-Le</h3>
-          <img class="ui fluid image" src="/images/bale.jpg" style="height: 200px"  >
-          <span>Location</span>
-          <div class="content">
-            <div class="ui grid">
-              <div class="eleven wide left aligned column">
-                <div class="row"><a href="">Item1</a></div>
-                <div class="row"><a href="">Item2</a></div>
-                <div class="row"><a href="">Item3</a></div>
-              </div>
-              <div class="five wide right aligned column">
-                <div class="row">$7.50</div>
-                <div class="row">$6.50</div>
-                <div class="row">$11.50</div>
-              </div>
-            </div>
-          </div>
-          <button class="ui teal fluid button">View Restaurant Page</button>
-        </div>
-      </div>
-      <div class="four wide column">
-        <div class="ui segment">
-          <h3>Campus Center Food Court</h3>
-          <img class="ui fluid image" src="/images/foodcourt-cc.jpg" style="height: 200px">
-          <span>Location</span>
-          <div class="content">
-            <div class="ui grid">
-              <div class="eleven wide left aligned column">
-                <div class="row"><a href="">Item1</a></div>
-                <div class="row"><a href="">Item2</a></div>
-                <div class="row"><a href="">Item3</a></div>
-              </div>
-              <div class="five wide right aligned column">
-                <div class="row">$7.50</div>
-                <div class="row">$6.50</div>
-                <div class="row">$11.50</div>
-              </div>
-            </div>
-          </div>
-          <button class="ui teal fluid button">View Restaurant Page</button>
-        </div>
-      </div>
-
+      {{#each restaurant in restaurants }}
+        <div class="four wide column">{{>  Today_Page_Card restaurant=restaurant }}</div>
+      {{/each}}
     </div>
   </div>
+
+
 
   <script>
     $('.ui.dropdown')
