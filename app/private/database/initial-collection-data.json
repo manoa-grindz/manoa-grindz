@@ -125,27 +125,6 @@
           ],
           "description": "Local favorites served daily at Campus Center Food Court!",
           "picture": "/images/foodcourt-cc.jpg"
-        },
-        {
-          "name": "Dumbo",
-          "location": "Campus Center 2nd Floor",
-          "tags": [
-            "Local",
-            "Vegetarian",
-            "Seafood"
-          ],
-          "items": [
-            {
-              "name": "Steak Plate",
-              "price": "8.99"
-            },
-            {
-              "name": "California Roll",
-              "price": "3.99"
-            }
-          ],
-          "description": "Local favorites served daily at Campus Center Food Court!",
-          "picture": "/images/foodcourt-cc.jpg"
         }
       ]
     },
