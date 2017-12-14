@@ -4,3 +4,4 @@ import './loading.html';
 import './page-not-found.html';
 import './site-header.css';
 import './site-header.html';
+import './site-header.js';
