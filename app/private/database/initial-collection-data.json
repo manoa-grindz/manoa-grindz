@@ -130,6 +130,36 @@
     },
 
     {
+      "name": "EventCollection",
+      "contents": [
+        {
+          "eventname": "Ba-Le Free Sandwich Day",
+          "duration": "2:00PM - 5:00PM",
+          "location": "Hemingway Hall",
+          "description": "Bring your ID and get a free sub of your choice"
+        },
+        {
+          "eventname": "Juicy January",
+          "duration": "The Month of January during normal business hours",
+          "location": "Campus Center",
+          "description": "For all of January, all drinks 25% off"
+        },
+        {
+          "eventname": "Dunkin Thursdays",
+          "duration": "Every Thursday",
+          "location": "Paradise Palms",
+          "description": "Every purchase of five dollars or more gets a free donut"
+        },
+        {
+          "eventname": "",
+          "duration": "2:00PM - 5:00PM",
+          "location": "Hemingway Hall",
+          "description": "Bring your ID and get a free sub of your choice",
+        },
+      ]
+    },
+
+    {
       "name": "ProfileCollection",
       "contents": [
         {

@@ -86,4 +86,4 @@ class EventCollection extends BaseCollection {
 /**
  * Provides the singleton instance of this class to all other entities.
  */
-export const Profiles = new ProfileCollection();
+export const Events = new EventCollection();
