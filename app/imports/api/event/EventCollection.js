@@ -54,11 +54,10 @@ class EventCollection extends BaseCollection {
     check({ eventname, duration, location, description }, checkPattern);
 
     if (this.find({ eventname }).count() > 0) {
-      throw new Meteor.Error(`${username} is previously defined in another Event`);
+      throw new Meteor.Error(`${eventname} is previously defined in another Event`);
     }
 
-    return this._collection.insert({ firstName, lastName, username, bio, interests, picture, title, github,
-      facebook, instagram, location });
+    return this._collection.insert({ eventname, duration, location, description });
   }
 
   /**
@@ -68,18 +67,11 @@ class EventCollection extends BaseCollection {
    */
   dumpOne(docID) {
     const doc = this.findDoc(docID);
-    const firstName = doc.firstName;
-    const lastName = doc.lastName;
-    const username = doc.username;
-    const bio = doc.bio;
-    const interests = doc.interests;
-    const picture = doc.picture;
-    const title = doc.title;
+    const eventname = doc.eventname;
+    const duration = doc.duration;
     const location = doc.location;
-    const github = doc.github;
-    const facebook = doc.facebook;
-    const instagram = doc.instagram;
-    return { firstName, lastName, username, bio, interests, picture, title, github, facebook, instagram, location };
+    const description = doc.description;
+    return { eventname, duration, location, description };
   }
 }
 
