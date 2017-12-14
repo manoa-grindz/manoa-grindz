@@ -1,10 +1,37 @@
 <template name="Add_Restaurant_Page">
   {{> Site_Header}}
 
-  <script>
-    function userRedirect() {
-      const username = Meteor.user().profile.name;
-      FlowRouter.go(`/${username}/profile`);
-    }
-  </script>
+  {{#if Template.subscriptionsReady}}
+
+    <div class="ui text container segment" style="margin-top: 90px">
+      <div class="ui dividing header">
+        Add Restaurant
+      </div>
+      <form class="ui equal width form restaurant-data-form {{ successClass }} {{ errorClass }}">
+        <div class="field">
+          {{> Text_Form_Control label="Name" placeholder="" errorMessage=(fieldError "name")}}
+        </div>
+        <div class="field">
+          {{> Text_Form_Control label="Location" placeholder="" errorMessage=(fieldError "location")}}
+        </div>
+        <div class="field">
+          {{> Select_Form_Control label="Tags" errorMessage=(fieldError "tags") multiple=true }}
+        </div>
+        <div class="field">
+          {{> Text_Form_Control label="Picture" placeholder="http://foo.com/shot.jpg" errorMessage=(fieldError "picture")}}
+        </div>
+        <div class="field">
+          {{> TextArea_Form_Control label="Description" placeholder="Description" errorMessage=(fieldError "description")}}
+        </div>
+        <button class="ui primary button" type="submit">Submit</button>
+
+        {{#if displaySuccessMessage}}
+          <div class="ui success message">
+            <p>Profile data successfully updated.</p>
+          </div>
+        {{/if}}
+      </form>
+    </div>
+
+  {{/if}}
 </template>

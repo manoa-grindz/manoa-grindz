@@ -1,30 +1,24 @@
 <template name="Today_Page">
+  {{#if Template.subscriptionsReady}}
+    {{> Site_Header}}
 
-  {{> Site_Header}}
+    <div class="placeholder-today">
 
-  <div class="placeholder-today">
-
-  </div>
-
-  <div class="ui container">
-    <div class="ui grid">
-      {{#each restaurant in restaurants }}
-        <div class="four wide column">{{>  Today_Page_Card restaurant=restaurant }}</div>
-      {{/each}}
     </div>
-  </div>
 
+    <div class="ui container">
+      <div class="ui grid">
+        {{#each restaurant in restaurants }}
+          <div class="four wide column">{{>  Today_Page_Card restaurant=restaurant }}</div>
+        {{/each}}
+      </div>
+    </div>
 
+  {{/if}}
 
   <script>
     $('.ui.dropdown')
         .dropdown()
     ;
-  </script>
-  <script>
-    function userRedirect() {
-      const username = Meteor.user().profile.name;
-      FlowRouter.go(`/${username}/profile`);
-    }
   </script>
 </template>
