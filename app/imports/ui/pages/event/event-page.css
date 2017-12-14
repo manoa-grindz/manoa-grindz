@@ -6,3 +6,7 @@
 .ui.fluid.image {
   height: 400px;
 }
+
+.event.image {
+  height: 100px;
+}
