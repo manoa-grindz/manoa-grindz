@@ -3,7 +3,7 @@
 
 
   <div class="ui container" style="margin-top:50px">
-    {{#if Template.subscriptionsReady}}
+
     <table style="margin-top: 20px" class="ui celled table">
       <thead>
       <tr>
@@ -11,50 +11,22 @@
         <th>Duration</th>
         <th>Location</th>
         <th>Description</th>
+        <th></th>
       </tr>
       </thead>
 
       <tbody>
-      {{#each event in eventsList}}
+      {{#each event in events}}
       <tr>
-        <td>{{contact.first}}</td>
-        <td>{{contact.last}}</td>
-        <td>{{contact.address}}</td>
-        <td>{{contact.telephone}}</td>
-        <td>{{contact.email}}</td>
-        <td><a href= "{{pathFor 'Edit_Contact_Page' _id=contact._id}}">Edit</a></td>
+        <td>{{event.eventname}}</td>
+        <td>{{event.duration}}</td>
+        <td>{{event.location}}</td>
+        <td>{{event.description}}</td>
+        <td>{{event.picture}}</td>
       </tr>
       {{/each}}
       </tbody>
     </table>
-    {{/if}}
   </div>
 
- <!--- <div class="ui container">
-    <img class="ui fluid image" src="http://via.placeholder.com/200x200" draggable="true" data-bukket-ext-bukket-draggable="true">
-    <div class="ui vertical segment">
-      <p>Some information regarding current events</p>
-    </div>
-    <div class="ui vertical segment">
-      <p>More infomration</p>
-    </div>
-    <div class="ui vertical segment">
-      <p>testing more infomration here</p>
-    </div>
-  </div>
-  -->
-
-	
-	
-	<script>
-		$('.ui.dropdown')
-		.dropdown()
-		;
-	</script>
-  <script>
-    function userRedirect() {
-      const username = Meteor.user().profile.name;
-      FlowRouter.go(`/${username}/profile`);
-    }
-  </script>
 </template>

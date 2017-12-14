@@ -23,6 +23,7 @@ class EventCollection extends BaseCollection {
       duration: { type: String, optional: true },
       location: { type: String, optional: true },
       description: { type: String, optional: true },
+      picture: { type: SimpleSchema.RegEx.Url, optional: true },
     }, { tracker: Tracker }));
   }
 
@@ -48,16 +49,17 @@ class EventCollection extends BaseCollection {
    * if one or more interests are not defined, or if github, facebook, and instagram are not URLs.
    * @returns The newly created docID.
    */
-  define({ eventname, duration, location, description }) {
+  define({ eventname, duration, location, description, picture }) {
     // make sure required fields are OK.
-    const checkPattern = { eventname: String, duration: String, location: String, description: String };
-    check({ eventname, duration, location, description }, checkPattern);
+    const checkPattern = { eventname: String, duration: String, location: String, description: String, picture: String,
+    };
+    check({ eventname, duration, location, description, picture }, checkPattern);
 
     if (this.find({ eventname }).count() > 0) {
       throw new Meteor.Error(`${eventname} is previously defined in another Event`);
     }
 
-    return this._collection.insert({ eventname, duration, location, description });
+    return this._collection.insert({ eventname, duration, location, description, picture });
   }
 
   /**
@@ -71,7 +73,8 @@ class EventCollection extends BaseCollection {
     const duration = doc.duration;
     const location = doc.location;
     const description = doc.description;
-    return { eventname, duration, location, description };
+    const picture = doc.picture;
+    return { eventname, duration, location, description, picture };
   }
 }
 

@@ -125,6 +125,27 @@
           ],
           "description": "Local favorites served daily at Campus Center Food Court!",
           "picture": "/images/foodcourt-cc.jpg"
+        },
+        {
+          "name": "Dumbo",
+          "location": "Campus Center 2nd Floor",
+          "tags": [
+            "Local",
+            "Vegetarian",
+            "Seafood"
+          ],
+          "items": [
+            {
+              "name": "Steak Plate",
+              "price": "8.99"
+            },
+            {
+              "name": "California Roll",
+              "price": "3.99"
+            }
+          ],
+          "description": "Local favorites served daily at Campus Center Food Court!",
+          "picture": "/images/foodcourt-cc.jpg"
         }
       ]
     },
@@ -136,7 +157,8 @@
           "eventname": "Ba-Le Free Sandwich Day",
           "duration": "2:00PM - 5:00PM",
           "location": "Hemingway Hall",
-          "description": "Bring your ID and get a free sub of your choice"
+          "description": "Bring your ID and get a free sub of your choice",
+          "picture": "/images/foodcourt-cc.jpg"
         },
         {
           "eventname": "Juicy January",
